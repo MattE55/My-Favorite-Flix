@@ -1,10 +1,10 @@
-const express = require('express');
-  morgan = require ('morgan');
+const express = require('./express');
+  morgan = require ('./morgan');
 
 const app = express ();
 
-const bodyParser = require('body-parser'),
-  methodOverride = require('method-override');
+const bodyParser = require('./body-parser'),
+  methodOverride = require('./method-override');
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -23,16 +23,44 @@ app.use(express.static('public'));
 
 let topMovies = [
   {
-    title: '',
-    director: ''
+    title: 'Knives Out',
+    director: 'Rian Johnson'
   },
   {
-    title: '',
-    director: ''
+    title: 'Reservoir Dogs',
+    director: 'Quentin Tarantino'
   },
   {
-    title: '',
-    director: ''
+    title: 'Shutter Island',
+    director: 'Martin Scorsese'
+  },
+  {
+    title: 'Kung Fu Panda',
+    director: 'Mark Osborne'
+  },
+  {
+    title: 'Dolemite is my Name',
+    director: 'Craig Brewer'
+  },
+  {
+    title: 'The Other Guys',
+    director: 'Adam McKay'
+  },
+  {
+    title: 'Zodiac',
+    director: 'David Fincher'
+  },
+  {
+    title: 'Polar',
+    director: 'Jonas Akerlund'
+  },
+  {
+    title: 'The Big Lebowski',
+    director: 'The Coen Brothers'
+  },
+  {
+    title: 'The Ballad of Buster Scruggs',
+    director: 'The Coen Brothers'
   }
 ];
 
