@@ -1,10 +1,10 @@
-const express = require('./express');
-  morgan = require ('./morgan');
+const express = require('express');
+  morgan = require ('morgan');
 
 const app = express ();
 
-const bodyParser = require('./body-parser'),
-  methodOverride = require('./method-override');
+const bodyParser = require('body-parser'),
+  methodOverride = require('method-override');
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -76,10 +76,6 @@ app.get('/documentation', (req, res) => {
 
 app.get('/movies', (req, res) => {
   res.json(topMovies);
-});
-
-app.get('/secreturl', (req, res) => {
-  res.send('This is a secret url with super top-secret content.');
 });
 
 
