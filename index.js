@@ -102,7 +102,7 @@ app.get('/movies/:title', (req, res) => {
 //Return Data about director by name
 app.get('/movies/:director', (req, res) => {
   res.json(movies.find((movies) =>
-    { return movie.director === req.params.director }));
+    { return movies.director === req.params.director }));
 });
 
 
