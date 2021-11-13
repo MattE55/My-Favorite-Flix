@@ -75,6 +75,18 @@ let movies = [
   }
 ];
 
+let users = [
+  {
+    id: 1,
+    username: 'John Smith'
+  },
+  {
+    id: 2,
+    username: 'Homer Simpson'
+  }
+]
+
+
 // GET requests
 
 app.get('/', (req, res) => {
@@ -91,6 +103,11 @@ app.get('/movies', (req, res) => {
   res.json(movies);
 });
 
+
+//Returns a list of all the users
+app.get('/users', (req, res) => {
+  res.json(users);
+});
 
 //Returns data about a genre by title of movie
 app.get('/movies/:title', (req, res) => {
