@@ -22,7 +22,7 @@ app.use(morgan('common'));
 
 app.use(express.static('public'));
 
-const movies = [
+let movies = [
   {
     num: 1,
     title: 'Knives Out',
@@ -85,7 +85,7 @@ const movies = [
   }
 ];
 
-const directors = [
+let directors = [
   {
     name: 'Rian Johnson',
     birthyear: '1973'
@@ -124,7 +124,7 @@ const directors = [
   }
 ]
 
-const users = [
+let users = [
   {
     id: 1,
     username: 'John Smith'
@@ -175,7 +175,7 @@ const movie = movies.find((movies) =>
 //Returns data about a genre by title of movie
 app.get('/movies/:title/genre', (req, res) => {
 const movie = movies.find((movies) =>
-    { return movies.genre === req.params.title });
+    { return movies.title === req.params.title });
  if (movie) {
     res.status(201).send(movies.genre);
   } else {
