@@ -20,50 +20,52 @@ Users will be able to create and customize their profile and create a list of th
     <td><code>GET</code></td>
     <td>A JSON object holding data about all the movies</td>
   </tr>
+  <tr>
+    <td>Get data about a movie from the title</td>
+    <td>movies/[Title]</td>
+    <td><code>GET</code></td>
+    <td>A JSON object holding the data of the movie</td>
+  </tr>
+  <tr>
+    <td>Return data about a genre of movie</td>
+    <td>/movies/[Genre]</td>
+    <td><code>GET</code></td>
+    <td>A JSON object holding the data of a movie containing the genre</td>
+  </tr>
+  <tr>
+    <td>Return info about the director by name</td>
+    <td>/movies/[Director]</td>
+    <td><code>GET</code></td>
+    <td>A JSON object holding data about a movie containing the director name</td>
+  </tr>
+  <tr>
+    <td>Add a new movie title to the list of movies</td>
+    <td>/movies/[Num]/[Title]</td>
+    <td><code>POST</code></td>
+    <td>A text message indicating the movie has been added, including the number where it is on the list</td>
+  </tr>
+  <tr>
+    <td>Delete a movie from the list</td>
+    <td>/movies/[Title]</td>
+    <td><code>DELETE</code></td>
+    <td>A text message indicating the movie was deleted</td>
+  </tr>
+  <tr>
+    <td>Delete a user from the list</td>
+    <td>/users/[Username]</td>
+    <td><code>DELETE</code></td>
+    <td>A text message indicating the user was deleted</td>
+  </tr>
+  <tr>
+    <td>Register a new user</td>
+    <td>/users</td>
+    <td><code>POST</code></td>
+    <td>A text message indicating the user was created</td>
+  </tr>
+  <tr>
+    <td>Update a users username</td>
+    <td>/users/[Username]</td>
+    <td><code>PUT</code></td>
+    <td>A text message indicating the username was uptaded</td>
+
 </tbody></table>
-
-
-Request: Get a list of movies
-URL: /movies
-HTTP Method: GET
-Response Data: A JSON object holding data about all the movies
-
-Request: Get data about a movie from the title
-URL: movies/[Title]
-HTTP Methods: GET
-Response Data: A JSON object holding the data of the movie
-
-Request: Return data about a genre of movie
-URL: /movies/[Genre]
-HTTP Method: GET
-Response Data: A JSON object holding the data of a movie containing the genre
-
-Request: Return info about the director by name
-URL: /movies/[Director]
-HTTP Method: GET
-Response Data: A JSON object holding data about a movie containing the director name
-
-Request: Add a new movie title to the list of movies
-URL: /movies/[Num]/[Title]
-HTTP Method: POST
-Response Data: A JSON Object holding data about the movie has been added, including the number where it is on the list.
-
-Request: Delete a movie from the list
-URL: /movies/[Title]
-HTTP Method: DELETE
-Response Data: A text message indicating the movie was deleted
-
-Request: Delete a user from the list
-URL: /users/[Username]
-HTTP Methods: DELETE
-Response Data: A text message indicating the user was deleted
-
-Request: Register a new user
-URL: /users
-HTTP Methods: POST
-Response Data: A text message indicating the user was created
-
-Request: Update a users username
-URL: /users/[Username]
-HTTP Methods: PUT
-Response Data: A text message indicating the username was updated
