@@ -15,7 +15,8 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 
 app.use((err, req, res, next) => {
-  // logic
+  console.error(err.stack);
+  res.status(500).send(err);
 });
 
 app.use(morgan('common'));
@@ -177,7 +178,7 @@ app.get('/movies/:title/genre', (req, res) => {
 const movie = movies.find((movies) =>
     { return movies.title === req.params.title });
  if (movie) {
-    res.status(201).send(movies.genre);
+    res.status(200).send(movie.genre);
   } else {
     res.status(404).send('Movie ' + req.params.title + ' not found.');
   }
