@@ -25,61 +25,61 @@ app.use(express.static('public'));
 
 let movies = [
   {
-    num: 1,
+    movieid: 1,
     title: 'Knives Out',
     genre: 'Mystery',
     director: 'Rian Johnson'
   },
   {
-    num: 2,
+    movieid: 2,
     title: 'Reservoir Dogs',
     genre: 'Drama',
     director: 'Quentin Tarantino'
   },
   {
-    num: 3,
+    movieid: 3,
     title: 'Shutter Island',
     genre: 'Thriller',
     director: 'Martin Scorsese'
   },
   {
-    num: 4,
+    movieid: 4,
     title: 'Kung Fu Panda',
     genre: 'Animation',
     director: 'Mark Osborne'
   },
   {
-    num: 5,
+    movieid: 5,
     title: 'Dolemite is my Name',
     genre: 'Comedy',
     director: 'Craig Brewer'
   },
   {
-    num: 6,
+    movieid: 6,
     title: 'The Other Guys',
     genre: 'Comedy',
     director: 'Adam McKay'
   },
   {
-    num: 7,
+    movieid: 7,
     title: 'Zodiac',
     genre: 'Mystery',
     director: 'David Fincher'
   },
   {
-    num: 8,
+    movieid: 8,
     title: 'Polar',
     genre: 'Drama',
     director: 'Jonas Akerlund'
   },
   {
-    num: 9,
+    movieid: 9,
     title: 'The Big Lebowski',
     genre: 'Comedy',
     director: 'The Coen Brothers'
   },
   {
-    num: 10,
+    movieid: 10,
     title: 'The Ballad of Buster Scruggs',
     genre: 'Drama',
     director: 'The Coen Brothers'
@@ -88,51 +88,82 @@ let movies = [
 
 let directors = [
   {
+    directorid: 1,
     name: 'Rian Johnson',
-    birthyear: '1973'
+    bio: 'Rian is an American film director, producer, and screenwriter. He made his directorial debut with the neo-noir mystery film Brick (2005), which received positive reviews and grossed nearly $4 million on a $450,000 budget.',
+    birthyear: '1973',
+    deathyear: '-'
   },
   {
+    directorid: 2,
     name: 'Quentin Tarantino',
-    birthyear: '1963'
+    bio: 'Quentin is an American film director, screenwriter, producer, film critic, and actor. His films are characterized by nonlinear storylines, dark humor, stylized violence, extended dialogue, ensemble casts, references to popular culture, alternate history, and neo-noir.',
+    birthyear: '1963',
+    deathyear: '-'
   },
   {
+    directorid: 3,
     name: 'Martin Scorsese',
-    birthyear: '1942'
+    bio: 'Martin is an American film director, producer, screenwriter, and actor. One of the major figures of the New Hollywood era, he is widely regarded as one of the greatest and most influential directors in film history.',
+    birthyear: '1942',
+    deathyear: ''
   },
   {
+    directorid: 4,
     name: 'Mark Osborne',
-    birthyear: '1970'
+    bio: 'Mark began his career by studying Foundation Art at Pratt Institute in New York before receiving his Bachelor of Fine Arts Degree in Experimental Animation from the California Institute of the Arts in June 1992. His thesis film, Greener, won numerous awards and was screened at more than 40 film festivals worldwide.',
+    birthyear: '1970',
+    deathyear: '-'
   },
   {
+    directorid: 5,
     name: 'Craig Brewer',
-    birthyear: '1971'
+    bio: 'Craig is an American film director, producer, and screenwriter. His 2005 movie Hustle & Flow won the Audience Award at the 2005 Sundance Film Festival and achieved commercial success, along with an Academy Award for Best Original Song, Its Hard out Here for a Pimp.',
+    birthyear: '1971',
+    deathyear: '-'
   },
   {
+    directorid: 6,
     name: 'Adam McKay',
-    birthyear: '1968'
+    bio: 'Adam is an American film and television director, producer, screenwriter, and comedian. McKay began his career in the 1990s as a head writer for the NBC sketch comedy show Saturday Night Live for two seasons and is the co-founder of the Upright Citizens Brigade.',
+    birthyear: '1968',
+    deathyear: '-'
   },
   {
+    directorid: 7,
     name: 'David Fincher',
-    birthyear: '1962'
+    bio: 'David is an American film director. His films, mostly psychological thrillers and biographical dramas, have received 40 nominations at the Academy Awards, including three for him as Best Director.',
+    birthyear: '1962',
+    deathyear: '-'
   },
   {
+    directorid: 8,
     name: 'Jonas Akerlund',
-    birthyear: '1965'
+    bio: 'Jonas is a Swedish film director, screenwriter, music video director, and drummer. His video for Madonnas song Ray of Light won a Grammy Award for Best Music Video, Short Form, and a record of five awards at 1998 MTV Video Music Awards, including the Video of the Year.',
+    birthyear: '1965',
+    deathyear: ''
   },
   {
+    directorid: 9,
     name: 'The Coen Brothers',
-    birthyear: '1954 and 1957'
+    bio: 'Joel Coen and Ethan Coen popularly known as the coen brothers are American film directors, producers, screenwriters, and editors. Their films span many genres and styles, which they frequently subvert or parody.',
+    birthyear: '1954 and 1957',
+    deathyear: ''
   }
 ]
 
 let users = [
   {
-    id: 1,
+    userid: 1,
     username: 'John Smith'
   },
   {
-    id: 2,
+    userid: 2,
     username: 'Homer Simpson'
+  },
+  {
+    userid: 3,
+    username: 'Michelle Smith'
   }
 ]
 
@@ -207,7 +238,7 @@ app.post('/movies', (req, res) => {
     const message = 'missing title in request body';
     res.status(400).send(message);
   } else {
-    newMovie.num = uuid.v4();
+    newMovie.movieid = uuid.v4();
     movies.push(newMovie);
     res.status(201).send(newMovie);
   }
@@ -236,7 +267,7 @@ app.post('/users', (req, res) => {
     const message = 'missing username in request body';
     res.status(400).send(message);
   } else {
-    newUser.id = uuid.v4();
+    newUser.userid = uuid.v4();
     users.push(newUser);
     res.status(201).send(newUser);
   }
