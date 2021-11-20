@@ -28,60 +28,70 @@ let movies = [
     movieid: 1,
     title: 'Knives Out',
     genre: 'Mystery',
+    description: 'A  film about a detective who investigates the death of a patriarch of a disfunctional family.',
     director: 'Rian Johnson'
   },
   {
     movieid: 2,
     title: 'Reservoir Dogs',
     genre: 'Drama',
+    description: 'A  film about the aftermath of a jewelry heist gone wrong. The surviving criminals do not know who to trust within each other',
     director: 'Quentin Tarantino'
   },
   {
     movieid: 3,
     title: 'Shutter Island',
     genre: 'Thriller',
+    description: 'A US Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane',
     director: 'Martin Scorsese'
   },
   {
     movieid: 4,
     title: 'Kung Fu Panda',
     genre: 'Animation',
+    description: 'Po, a lovable panda, has been chosen as protector of the Valley of Peace. Even though he is clumsy and overweight, he will learn to harness his power to fight his enemies.',
     director: 'Mark Osborne'
   },
   {
     movieid: 5,
     title: 'Dolemite is my Name',
     genre: 'Comedy',
+    description: 'A comedy and rap pioneer who will do whatever he can to prove naysayers wrong and claim the fame he feels he deserves. He may also have a kung-fu fighting alter ego.',
     director: 'Craig Brewer'
   },
   {
     movieid: 6,
     title: 'The Other Guys',
     genre: 'Comedy',
+    description: 'Two New York City detectives who could not be any different from each other take on the cities top cops and toughest cases.',
     director: 'Adam McKay'
   },
   {
     movieid: 7,
     title: 'Zodiac',
     genre: 'Mystery',
+    description: 'A cartoonist becomes an amature detective obsessed with tracking down the infamous zodiac killer.',
     director: 'David Fincher'
   },
   {
     movieid: 8,
     title: 'Polar',
     genre: 'Drama',
+    description: 'A retired hitman who has moved to a very seclude area to live in peace suddently finds himself being a target',
     director: 'Jonas Akerlund'
   },
   {
     movieid: 9,
     title: 'The Big Lebowski',
     genre: 'Comedy',
+    description: 'Jeff Lebowski, aka The Dude, runs into trouble when a millionaire who has the same name is being targeted by debt collectors',
     director: 'The Coen Brothers'
   },
   {
     movieid: 10,
     title: 'The Ballad of Buster Scruggs',
     genre: 'Drama',
+    description: 'A film which consists of several short films from the old western times. These films consist of gunslingers, bank robbers, a traveling act, an elderly gold digger, a wagon train, and some bounty hunters.',
     director: 'The Coen Brothers'
   }
 ];
