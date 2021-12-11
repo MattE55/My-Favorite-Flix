@@ -30,6 +30,12 @@ Users will be able to create and customize their profile and create a list of th
     <td><code>GET</code></td>
     <td>A JSON object holding data about all the movies</td>
   </tr>
+	<tr>
+		<td>Get a list of all users</td>
+		<td>/users</td>
+		<td><code>GET</code></td>
+		<td>A JSON object holding the data of all users</td>
+	</tr>
   <tr>
     <td>Get data about a movie from the title</td>
     <td>movies/[Title]</td>
@@ -38,45 +44,64 @@ Users will be able to create and customize their profile and create a list of th
   </tr>
   <tr>
     <td>Return data about a genre of movie</td>
-    <td>/movies/[Genre]</td>
+    <td>/movies/Genre/[Name]</td>
     <td><code>GET</code></td>
-    <td>A JSON object holding the data of a movie containing the genre</td>
+    <td>A JSON object holding the data of a genres description and movies of that genre</td>
   </tr>
+	<tr>
+		<td>Return info about a user from their Username</td>
+		<td>/users/[Username]</td>
+		<td><code>GET</code></td>
+		<td>A JSON object holding data about a user</td>
+	</tr>
   <tr>
     <td>Return info about the director by name</td>
-    <td>/movies/[Director]</td>
+    <td>/movies/Director/[Name]</td>
     <td><code>GET</code></td>
     <td>A JSON object holding data about a movie containing the director name</td>
   </tr>
   <tr>
     <td>Add a new movie title to the list of movies</td>
-    <td>/movies/[Num]/[Title]</td>
+    <td>/movies</td>
     <td><code>POST</code></td>
-    <td>A text message indicating the movie has been added, including the number where it is on the list</td>
+    <td>A text message indicating the movie has been added syntax of the movie TBD</td>
   </tr>
   <tr>
     <td>Delete a movie from the list</td>
     <td>/movies/[Title]</td>
     <td><code>DELETE</code></td>
-    <td>A text message indicating the movie was deleted</td>
+    <td>To remove a movie from the movies collection. A text message will appear indicating the movie was deleted</td>
   </tr>
   <tr>
     <td>Delete a user from the list</td>
     <td>/users/[Username]</td>
     <td><code>DELETE</code></td>
-    <td>A text message indicating the user was deleted</td>
+    <td>To remove a user from the users collection. A text message indicating the user was deleted</td>
   </tr>
   <tr>
     <td>Register a new user</td>
     <td>/users</td>
     <td><code>POST</code></td>
-    <td>A text message indicating the user was created</td>
+    <td>To add a new user to the users collection. A text message indicating the user was created</td>
   </tr>
   <tr>
     <td>Update a users username</td>
     <td>/users/[Username]</td>
     <td><code>PUT</code></td>
     <td>A text message indicating the username was uptaded</td>
+	</tr>
+	<tr>
+		<td>Add a movie to the users fav movies</td>
+		<td>/users/[Username]/movies/[MovieID]</td>
+		<td><code>POST</code></td>
+		<td>A text message indicating the movie has been added to the array of their favorite movies.</td>
+	</tr>
+	<tr>
+		<td>Update a users username</td>
+		<td>/users/[Username]/movies/[MovieID]</td>
+		<td><code>DELETE</code></td>
+		<td>A text message indicating the movie has been removed from the array of their favorite movies</td>
+	</tr>
 
 </tbody></table>
 
