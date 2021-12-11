@@ -155,26 +155,50 @@ let directors = [
   },
   {
     directorid: 9,
-    name: 'The Coen Brothers',
-    bio: 'Joel Coen and Ethan Coen popularly known as the coen brothers are American film directors, producers, screenwriters, and editors. Their films span many genres and styles, which they frequently subvert or parody.',
-    birthyear: '1954 and 1957',
-    deathyear: ''
+    Name: 'The Coen Brothers',
+    Bio: 'Joel Coen and Ethan Coen popularly known as the coen brothers are American film directors, producers, screenwriters, and editors. Their films span many genres and styles, which they frequently subvert or parody.',
+    Birthyear: '1954 and 1957',
+    Deathyear: ''
   }
 ]
 
 let users = [
   {
     userid: 1,
-    username: 'John Smith'
+    username: 'JohnnySmith',
+    Password: 'securepass123',
+    Email: 'JSmith@probablygmail.com',
+    Birthday: '1982-03-20',
   },
   {
     userid: 2,
-    username: 'Homer Simpson'
+    username: 'HomerSimpson',
+    Password: 'Dohdoh',
+    Email: 'homer@thepowerplant.com',
+    Birthday: '1956-05-12',
   },
   {
     userid: 3,
-    username: 'Michelle Smith'
+    username: 'MichelleS',
+    Password: 'reallysecurepass',
+    Email: 'MSmith@probablygmail.com',
+    Birthday: '1983-05-18',
+  },
+  {
+    userid: 4,
+    username: 'dramaexpert',
+    Password: 'totallynottheircatsname',
+    Email: 'drama@probablygmail.com',
+    Birthday: '1995-08-02',
+  },
+  {
+    userid: 5,
+    username: 'movielover99',
+    Password: 'blackandwhite',
+    Email: 'movielover@probablygmail.com',
+    Birthday: '1990-09-15',
   }
+
 ]
 
 
