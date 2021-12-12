@@ -305,9 +305,9 @@ const movie = movies.find((movies) =>
 });*/
 
 app.get('/movies/Genre/:Name', (req, res) => {
-  Movies.findOne({ 'Genre.Name' : req.params.Name })
-    .then((movie) => {
-      res.json(movie);
+  Movies.find({ 'Genre.Name' : req.params.Name })
+    .then((movies) => {
+      res.json(movies);
     })
     .catch((err) => {
       console.error(err);
@@ -537,19 +537,21 @@ app.post('/users/:Username/movies/:MovieID', (req, res) => {
 });
 
 // Remove a movie to a user's list of favorites
-app.delete('/users/:Username/movies/:MovieID', (req, res) => {
-  Users.findOneAndRemove({ Username: req.params.Username }, {
-     $delete: { FavoriteMovies: req.params.MovieID }
-   },
-   { new: true }, // This line makes sure that the updated document is returned
-  (err, updatedUser) => {
-    if (err) {
-      console.error(err);
-      res.status(500).send('Error: ' + err);
-    } else {
-      res.json(updatedUser);
-    }
-  });
+app.delete("/users/:Username/movies/:movieID", (req, res) => {
+  Users.findOne({username: req.params.Username})
+    .then((user) => {
+      if (!user) {
+        return res.status(404).send("User does not exist")
+      }
+      if (user.FavoriteMovies && user.FavoriteMovies.includes(req.params.movieID)) {
+        user.FavoriteMovies.remove(req.params.movieID)
+        user.save(() => {
+          res.send(req.params.movieID + " Movie was removed from Favorites")
+        })
+          } else {
+            res.send("Movie was not found");
+          }
+      });
 });
 
 
