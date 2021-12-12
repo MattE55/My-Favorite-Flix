@@ -64,13 +64,28 @@ Users will be able to create and customize their profile and create a list of th
     <td>Add a new movie title to the list of movies</td>
     <td>/movies</td>
     <td><code>POST</code></td>
-    <td>A text message indicating the movie has been added syntax of the movie TBD</td>
+    <td>A JSON object showing the new movie addedd
+			{
+			Write in this syntax
+			Title: ,
+			Description: ,
+			Genre : {
+	    	Name: ,
+	    	Description:
+				},
+			Director: {
+	    	Name: ,
+	    	Bio:
+				},
+			ImagePath:
+			}
+	</td>
   </tr>
   <tr>
     <td>Delete a movie from the list</td>
     <td>/movies/[Title]</td>
     <td><code>DELETE</code></td>
-    <td>To remove a movie from the movies collection. A text message will appear indicating the movie was deleted</td>
+    <td>To remove a movie from the movies collection using the movie ID. A text message will appear indicating the movie was deleted</td>
   </tr>
   <tr>
     <td>Delete a user from the list</td>
@@ -82,13 +97,29 @@ Users will be able to create and customize their profile and create a list of th
     <td>Register a new user</td>
     <td>/users</td>
     <td><code>POST</code></td>
-    <td>To add a new user to the users collection. A text message indicating the user was created</td>
+    <td>To add a new user to the users collection. A text message indicating the user was created
+			Write in this syntax
+			{
+				Username: ,
+				Password: ,
+				Email: ,
+				Birthday:
+			}
+		</td>
   </tr>
   <tr>
     <td>Update a users username</td>
     <td>/users/[Username]</td>
     <td><code>PUT</code></td>
-    <td>A text message indicating the username was uptaded</td>
+    <td>A JSON object containing the updated user data
+			Write in this syntax
+			{
+				Username: ,
+				Password: ,
+				Email: ,
+				Birthday:
+			}
+		</td>
 	</tr>
 	<tr>
 		<td>Add a movie to the users fav movies</td>
