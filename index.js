@@ -55,7 +55,7 @@ app.get('/documentation', (req, res) => {
 
 
 // Get all movies
-app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
+/*app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
   Movies.find()
     .then((movies) => {
       res.status(201).json(movies);
@@ -63,6 +63,18 @@ app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) 
     .catch((err) => {
       console.error(err);
       res.status(500).send('Error: ' + err);
+    });
+});*/
+
+//Temp GET movies
+app.get("/movies", function (req, res) {
+  Movies.find()
+    .then(function (movies) {
+      res.status(201).json(movies);
+    })
+    .catch(function (error) {
+      console.error(error);
+      res.status(500).send("Error: " + error);
     });
 });
 
